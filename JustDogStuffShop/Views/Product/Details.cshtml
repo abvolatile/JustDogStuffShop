@@ -1,0 +1,21 @@
+﻿@model Product
+
+@{
+	ViewBag.Title = "Product Description";
+}
+
+<div class="thumbnail">
+	<img class="detailsImg" alt="@Model.Name" src="@Model.ImageUrl">
+	<div class="caption-full">
+		<h3 class="pull-right">@Model.Price.ToString("C")</h3>
+		<h3>
+			<a href="#">@Model.Name</a>
+		</h3>
+		<h4>@Model.ShortDescription</h4>
+		<p>@Model.LongDescription</p>
+		<p class="button">
+			<a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart"
+			   asp-route-productId="@Model.ProductId">Add to Cart</a>
+		</p>
+	</div>
+</div>

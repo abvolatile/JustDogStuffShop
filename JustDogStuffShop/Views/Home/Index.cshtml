@@ -1,0 +1,19 @@
+﻿@model HomeViewModel
+
+@{
+	ViewBag.Title = "Home";
+}
+
+@await Html.PartialAsync("Carousel")
+
+<div id="pow-info">
+	<h2 class="text-center">Products of the Week</h2>
+	<p class="text-center">Products we're really excited about this week!</p>
+</div>
+
+<div class="row">
+	@foreach (var product in Model.ProductsOfTheWeek)
+	{
+		@Html.Partial("ProductOverviewSummary", product)
+	}
+</div>

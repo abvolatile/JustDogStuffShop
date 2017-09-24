@@ -1,0 +1,95 @@
+﻿@model Order
+
+@{ 
+	ViewBag.Title = "Checkout";
+}
+
+<div id="checkout">
+	<form asp-action="Checkout" method="post" class="form-horizontal" role="form">
+		<h3>You're about to have a very happy pup!</h3>
+
+		@*<div asp-validation-summary="All" class="text-danger"></div>*@
+
+		<div class="form-group">
+			<label asp-for="FirstName" class="col-sm-2 control-label"></label>
+			<div class="col-sm-9">
+				<input asp-for="FirstName" class="form-control" />
+				<span asp-validation-for="FirstName" class="invalid"></span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="LastName" class="col-sm-2 control-label"></label>
+			<div class="col-sm-9">
+				<input asp-for="LastName" class="form-control" />
+				<span asp-validation-for="LastName" class="invalid"></span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="AddressLine1" class="col-sm-2 control-label"></label>
+			<div class="col-sm-9">
+				<input asp-for="AddressLine1" class="form-control" />
+				<span asp-validation-for="AddressLine1" class="invalid"></span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="AddressLine2" class="col-sm-2 control-label"></label>
+			<div class="col-sm-9">
+				<input asp-for="AddressLine2" class="form-control" />
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="City" class="col-sm-2 control-label"></label>
+			<div class="col-sm-6">
+				<input asp-for="City" class="form-control" />
+				<span asp-validation-for="City" class="invalid"></span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="State" class="col-sm-2 control-label"></label>
+			<div class="col-sm-4">
+				<input asp-for="State" class="form-control" />
+				<span asp-validation-for="State" class="invalid"></span>
+			</div>
+			<label asp-for="ZipCode" class="col-sm-2 control-label"></label>
+			<div class="col-sm-3">
+				<input asp-for="ZipCode" class="form-control" />
+				<span asp-validation-for="ZipCode" class="invalid"></span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="Country" class="col-sm-2 control-label"></label>
+			<div class="col-sm-6">
+				<input asp-for="Country" class="form-control" />
+				<span asp-validation-for="Country" class="invalid"></span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="PhoneNumber" class="col-sm-2 control-label"></label>
+			<div class="col-sm-5">
+				<input asp-for="PhoneNumber" class="form-control" />
+				<span asp-validation-for="PhoneNumber" class="invalid"></span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="Email" class="col-sm-2 control-label"></label>
+			<div class="col-sm-7">
+				<input asp-for="Email" class="form-control" />
+				<span asp-validation-for="Email" class="invalid"></span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-sm-offset-9 col-sm-3">
+				<input type="submit" class="btn btn-primary" value="Submit Order" />
+			</div>
+		</div>
+	</form>
+</div>
