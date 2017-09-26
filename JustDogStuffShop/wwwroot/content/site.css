@@ -183,7 +183,7 @@ footer {
 
 @media (max-width: 465px) {
 	.thumbnail .listImg {
-		height: 230px !important;
+		height: 240px !important;
 	}
 	.caption h3 a {
 		font-size: 26px;
